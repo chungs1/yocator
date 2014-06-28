@@ -10,7 +10,7 @@ import random
 @app.route('/')
 @app.route('/index')
 def index():
-    stats = models.Stats.query.get(0)
+    stats = models.Stats.query.first()
     total_subs = stats.subscriber_count
     total_yos = stats.yo_count
 
