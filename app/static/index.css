@@ -40,7 +40,8 @@ body {
   font-weight: bold;
   font-size: 40px;
   font-family: 'Lato', sans-serif;
-      margin-left: 33%;
+      margin-left: 36%;
+      margin-top: 3%;
 
       -webkit-text-stroke: 1px white;
    text-shadow:
@@ -58,7 +59,7 @@ body {
   font-weight: bold;
   font-size: 40px;
     font-family: 'Lato', sans-serif;
-    margin-left: 40%;
+    margin-left: 43%;
     -webkit-text-stroke: 1px white;
    text-shadow:
        3px 3px 0 #000,
