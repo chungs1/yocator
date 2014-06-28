@@ -16,7 +16,7 @@ def index():
 
     return render_template("index.html", subscribers=total_subs, yos=total_yos)
 
-@app.route('/add/?username=<new_subscriber_name>', methods=['GET', 'POST'])
+@app.route('/add/?username=<new_subscriber_name>')
 def add(new_subscriber_name):
     """
     get stats
