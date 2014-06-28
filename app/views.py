@@ -30,7 +30,7 @@ def add(new_subscriber_name):
     subscriber = models.Users.query.filter_by(yo_name=new_subscriber_name).first()
 
     if not subscriber:
-        subscriber = new models.User(name=new_subscriber_name, yo_count=0)
+        subscriber = models.User(name=new_subscriber_name, yo_count=0)
         stats_object.subscriber_count += 1
 
     new_yo = models.Yo(user=subscriber)
@@ -46,7 +46,5 @@ def add(new_subscriber_name):
 
 def send_yo():
 
-    if random.randint(0,100) == 95:j
+    if random.randint(0,100) == 95:
         requests.post("http://api.justyo.co/yoall/", data={'api_token': API_TOKEN})
-
-
