@@ -10,8 +10,8 @@ body {
   color: #A87DFF;
   font-weight: bold;
   font-family: 'Lato', sans-serif;
-  margin-top: 18%;
-  margin-left: 42%;
+  margin-top: 12%;
+  margin-left: 40%;
   -webkit-text-stroke: 2px white;
    text-shadow:
        3px 3px 0 #000,
@@ -33,4 +33,62 @@ body {
       1px -1px 0 #000,
       -1px 1px 0 #000,
        1px 1px 0 #000;
+}
+
+.counter {
+  color: #8CBEFF;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: 'Lato', sans-serif;
+      margin-left: 33%;
+
+      -webkit-text-stroke: 1px white;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+
+
+}
+
+.yos {
+  color: #8CBEFF;
+  font-weight: bold;
+  font-size: 40px;
+    font-family: 'Lato', sans-serif;
+    margin-left: 40%;
+    -webkit-text-stroke: 1px white;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+         font-family: 'Lato', sans-serif;
+}
+
+a {
+  margin-top: 30px;
+    color: #0060B6;
+    text-decoration: none;
+}
+
+a:hover 
+{
+     color:#00A0C6; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+
+.footer {
+  padding-top: 20px;
+  position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background: black;
+   color: white;
 }
