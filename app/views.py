@@ -26,7 +26,7 @@ def add(new_subscriber_name):
         for the user as well
 
     """
-    stats_object = models.Stats.query.get(0)
+    stats_object = models.Stats.query.first()
     subscriber = models.Users.query.filter_by(yo_name=new_subscriber_name).first()
 
     if not subscriber:
