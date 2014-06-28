@@ -10,13 +10,13 @@ import random
 @app.route('/')
 @app.route('/index')
 def index():
-    stats = models.Stats.query.get(0)
+    stats = models.Stats.query.first()
     total_subs = stats.subscriber_count
     total_yos = stats.yo_count
 
     return render_template("index.html", subscribers=total_subs, yos=total_yos)
 
-@app.route('/add/?username=<new_subscriber_name>', methods=['GET', 'POST'])
+@app.route('/add/?username=<new_subscriber_name>')
 def add(new_subscriber_name):
     """
     get stats
@@ -26,7 +26,7 @@ def add(new_subscriber_name):
         for the user as well
 
     """
-    stats_object = models.Stats.query.get(0)
+    stats_object = models.Stats.query.first()
     subscriber = models.Users.query.filter_by(yo_name=new_subscriber_name).first()
 
     if not subscriber:
@@ -43,6 +43,7 @@ def add(new_subscriber_name):
     
     #YO EVERYONE
     send_yo()
+    return ''
 
 def send_yo():
 
