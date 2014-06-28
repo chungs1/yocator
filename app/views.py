@@ -16,7 +16,7 @@ def index():
 
     return render_template("index.html", subscribers=total_subs, yos=total_yos)
 
-@app.route('/add/<new_subscriber_name>')
+@app.route('/add/?username=<new_subscriber_name>')
 def add(new_subscriber_name):
     """
     get stats
@@ -43,6 +43,7 @@ def add(new_subscriber_name):
     
     #YO EVERYONE
     send_yo()
+    return ''
 
 def send_yo():
 
