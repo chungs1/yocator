@@ -42,15 +42,10 @@ def add(new_subscriber_name):
     db.session.add(subscriber)
     db.session.commit()
     
-    #YO EVERYONE
-    send_yo()
     stats = models.Stats.query.first()
     total_subs = stats.subscriber_count
     total_yos = stats.yo_count
 
     return render_template("index.html", subscribers=total_subs, yos=total_yos)
 
-def send_yo():
 
-    if random.randint(0,100) == 95:
-        requests.post("http://api.justyo.co/yoall/", data={'api_token': API_TOKEN})
