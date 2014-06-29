@@ -17,6 +17,7 @@ body {
 }
 
 .block {
+  background-color: #6666fb;
   background-size:cover;
   color: #fff;
   max-width: 1500px;
@@ -66,8 +67,18 @@ a {
   -webkit-border-bottom-left-radius: 10px;
 }
 
+#third {
+  background-color: #C1F2B3;
+  color:#000;
+}
+
 #help {
   font-size: 4em;
+}
+
+#help2 {
+  font-size: 3.5em;
+  font-weight: 300;
 }
 
 #content {
