@@ -102,4 +102,10 @@ a {
 .profpic {
   width: 60%;
   height: 60%;
+  -webkit-border-radius: 10%;
+}
+.imgcont {
+  max-width: 100%;
+  max-height: 5%;
+  overflow: hidden;
 }

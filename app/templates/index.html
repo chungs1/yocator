@@ -6,26 +6,8 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   </head>
-  <script type="text/javascript">
-  function get_Yos() {
-    if (window.XMLHttpRequest) {
-      xmlhttp = new XMLHttpRequest();
-    } else {
-      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.onreadystatechange = function() {
-      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        document.getElementById("yo_number").innerHTML = xmlhttp.responseText;
-      }
-      setTimeout('get_Yos()', 1000);
-    }
-    xmlhttp.open("GET", "http://www.yotheworld.org:5000/yo_count");
-    xmlhttp.send();
-  }
-  window.onload = function() {
-    get_Yos();
-  }
-  </script>
+
+  
   <body>
     <div class="navv">
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -62,8 +44,8 @@
           </div>
           <div class="col-md-7">
             <div id="content">
-              Malaika is a four year-old from Haiti who suffers from atrioventricular canal defect, a condition that prevents blood from flowing properly in the heart. Her condition requires treatment, a costly operation of $1500. <br><br>
-              You can help her! If YOTHEWORLD gains the most subscribers and Yo's by July 4th, YOTHEWORLD will donate Yo Hackathon's most subscribed award of $2500 to her cause. Any spare money will be donated to the general fund on <a href="https://watsi.org/profile/e9f9c26f692c-malaika">Watsi</a>.<br><br>
+              <b style="font-size:1.5em">Malaika</b> is a four year-old from Haiti who suffers from <b>atrioventricular canal defect</b>, a condition that prevents blood from flowing properly in the heart. Her condition requires treatment, a costly operation of $1500. <br><br>
+              You can help her! If <b>YOTHEWORLD</b> gains the <b>most subscribers</b> and Yo's by <b>July 4th</b>, <b>YOTHEWORLD</b> will donate Yo Hackathon's most subscribed award of <b>$2500</b> to her cause. Any spare money will be donated to the general fund on <a href="https://watsi.org/profile/e9f9c26f692c-malaika">Watsi</a>.<br><br>
               <center style="font-size: 2em">Yo us at <b class="yohandle">YOTHEWORLD</b></center>.
             </div>
           </div>
@@ -76,32 +58,32 @@
           <div class="col-md-12 blurb" style="text-align:center; padding-top:3%" id="help2">
             About YOTHEWORLD
           </div>
-          <div class="col-md-12 blurb" style="text-align:center; padding-top:3%">{Maybe why we came up with the idea here}</div>
+          <div class="col-md-12 blurb" style="text-align:center; padding-top:3%">The overriding theme of yo is it's simplicity. We realized when attending the June 27, 2014 Yo Hackathon that something else that we wished were so simple was giving back.</div>
         </div>
         <div class="row" style="padding-top:4%">
           <center>
-            <div class="col-md-3"><img class="profpic" src="http://dogvacay.com/img/default_profile.jpg"></div>
-            <div class="col-md-3"><img class="profpic" src="http://dogvacay.com/img/default_profile.jpg"></div>
-            <div class="col-md-3"><img class="profpic" src="http://dogvacay.com/img/default_profile.jpg"></div>
-            <div class="col-md-3"><img class="profpic" src="http://dogvacay.com/img/default_profile.jpg"></div>
+            <div class="col-md-3 imgcont"><img class="profpic" src="../static/sebastian.png"></div>
+            <div class="col-md-3 imgcont"><img class="profpic" src="../static/sophiac.jpg"></div>
+            <div class="col-md-3 imgcont"><img class="profpic" src="../static/jaja.jpg"></div>
+            <div class="col-md-3 imgcont"><img class="profpic" src="../static/kyle.jpg"></div>
           </center>
         </div>
         <div class="row">
           <div class="col-md-3">
             <center><h3>Sebastian Merz</h3></center>
-            <div style="padding-left:13%">Insert description here lorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum </div>
+            <div style="padding-left:13%">Sebastian is rising Sophomore at UC Berkeley. He splits his time between school, hacking away on projects, and organizing events and hackthons for Berkeley's CS and entrepreneurship communities.</div>
           </div>
           <div class="col-md-3">
             <center><h3>Sophia Chung</h3></center>
-            <div style="padding-left:13%">Insert description here lorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum</div>
+            <div style="padding-left:13%">Sophia Chung is a rising junior at UC Berkeley. She loves hackathons and things tech related, and loves helping out in CS organizations at Berkeley.</div>
           </div>
           <div class="col-md-3">
             <center><h3>Jaja Liao</h3></center>
-            <div style="padding-left:13%">Insert description here lorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum</div>
+            <div style="padding-left:13%">Jaja Liao is a rising junior at Yale. She blogs on yaleandkale.com</div>
           </div>
           <div class="col-md-3">
             <center><h3>Kyle Ong</h3></center>
-            <div style="padding-left:13%">Insert description here lorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum</div>
+            <div style="padding-left:13%">Kyle Ong is a rising senior at UC Berkeley. He enjoys creating new hacks and making music.</div>
           </div>
         </div>
       </div>
@@ -110,6 +92,38 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
+    <script type="text/javascript">
+  /*function get_Yos() {
+    if (window.XMLHttpRequest) {
+      xmlhttp = new XMLHttpRequest();
+    } else {
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        document.getElementById("yo_number").innerHTML = xmlhttp.responseText;
+      }
+      setTimeout('get_Yos()', 1000);
+    }
+    xmlhttp.open("GET", "http://www.yotheworld.org:5000/yo_count");
+    xmlhttp.send();
+  } */
+  /*window.onload = function() {
+    get_Yos();
+  }*/
+  $(document).ready(function() {
+    function get_yos() {
+      $.ajax({
+        url: "http://www.yotheworld.org:5000/yo_count",
+        cache: false,
+        success: function(html){
+                $("#yo_number").html(html);
+        }
+      });
+      setTimeout(get_yos, 1000);
+    }
+    get_yos();
+  })
+  </script>
   </body>
 </html>
