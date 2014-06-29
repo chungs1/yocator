@@ -1,6 +1,7 @@
 body {
   font-family: 'Lato', sans-serif;
   width: 100%;
+  background-color:#f0f0ff;
 }
 
 .subtitle {
@@ -16,10 +17,13 @@ body {
 }
 
 .block {
-  background-color: #639AFF;
+  background-color: #6666fb;
   background-size:cover;
   color: #fff;
-  height: 550px;
+  max-width: 1500px;
+  margin: auto;
+  border-radius:10px;
+  padding-bottom: 60px;
 }
 
 a {
@@ -35,14 +39,46 @@ a {
   color: red;
 }
 
+#first {
+  background-color: #6666fb;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+}
+
 #second {
   background-color: #ddd9fb;
   color: #000;
   font-weight: 300;
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+}
+
+#third {
+  background-color: #C1F2B3;
+  color:#000;
 }
 
 #help {
   font-size: 4em;
+}
+
+#help2 {
+  font-size: 3.5em;
+  font-weight: 300;
 }
 
 #content {
