@@ -1,3 +1,5 @@
 flask
+db_repository
+app.db
 *.pyc
 *.swp
