@@ -6,12 +6,33 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   </head>
+  <script type="text/javascript">
+  function get_Yos() {
+    if (window.XMLHttpRequest) {
+      xmlhttp = new XMLHttpRequest();
+    } else {
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        document.getElementById("yo_number").innerHTML = xmlhttp.responseText;
+      }
+      setTimeout('get_Yos()', 1000);
+    }
+    xmlhttp.open("GET", "http://www.yotheworld.org:5000/yo_count");
+    xmlhttp.send();
+  }
+  window.onload = function() {
+    setTimeout('get_Yos()', 1000);
+  }
+  </script>
   <body>
     <div class="navv">
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
           <div class="row" style="padding-top:2%; padding-bottom:2%;">
-            <span class="subscriber-number" id="yo_number">{{ yo_number }}</span><span class="subscriber-number"> YO's So Far</span>
+            <span class="subscriber-number" id="yo_number"></span>
+            <span class="subscriber-number"> YO's So Far</span>
           </div>
         </div>
       </nav>
