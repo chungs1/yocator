@@ -102,4 +102,5 @@ a {
 .profpic {
   width: 60%;
   height: 60%;
+  -webkit-border-radius: 10%;
 }

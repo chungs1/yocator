@@ -6,26 +6,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   </head>
-  <script type="text/javascript">
-  function get_Yos() {
-    if (window.XMLHttpRequest) {
-      xmlhttp = new XMLHttpRequest();
-    } else {
-      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.onreadystatechange = function() {
-      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        document.getElementById("yo_number").innerHTML = xmlhttp.responseText;
-      }
-      setTimeout('get_Yos()', 1000);
-    }
-    xmlhttp.open("GET", "http://www.yotheworld.org:5000/yo_count");
-    xmlhttp.send();
-  }
-  window.onload = function() {
-    setTimeout('get_Yos()', 1000);
-  }
-  </script>
+  
   <body>
     <div class="navv">
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -82,7 +63,7 @@
           <center>
             <div class="col-md-3"><img class="profpic" src="http://dogvacay.com/img/default_profile.jpg"></div>
             <div class="col-md-3"><img class="profpic" src="http://dogvacay.com/img/default_profile.jpg"></div>
-            <div class="col-md-3"><img class="profpic" src="http://dogvacay.com/img/default_profile.jpg"></div>
+            <div class="col-md-3"><img class="profpic" src="../static/jaja.jpg"></div>
             <div class="col-md-3"><img class="profpic" src="http://dogvacay.com/img/default_profile.jpg"></div>
           </center>
         </div>
@@ -110,6 +91,26 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    function get_Yos() {
+      if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest();
+      } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          document.getElementById("yo_number").innerHTML = xmlhttp.responseText;
+        }
+        setTimeout('get_Yos()', 1000);
+      }
+      xmlhttp.open("GET", "http://www.yotheworld.org:5000/yo_count");
+      xmlhttp.send();
+    }
+    window.onload = function() {
+      get_Yos();
+    }
+  </script>
 
   </body>
 </html>
