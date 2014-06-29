@@ -83,7 +83,7 @@
           </div>
           <div class="col-md-3">
             <center><h3>Kyle Ong</h3></center>
-            <div style="padding-left:13%">Insert description here lorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsumlorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum lorum ipsum</div>
+            <div style="padding-left:13%">Kyle Ong is a rising senior at UC Berkeley.</div>
           </div>
         </div>
       </div>
@@ -114,7 +114,7 @@
   $(document).ready(function() {
     function get_yos() {
       $.ajax({
-        url: "http://www.yotheworld.org:5000/yo_count",
+        url: "http://www.yotheworld.org/yo_count",
         cache: false,
         success: function(html){
                 $("#yo_number").html(html);
