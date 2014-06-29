@@ -17,8 +17,8 @@ def index():
 
     return render_template("index.html", subscribers=total_subs, yos=total_yos)
 
-@app.route('/<path:new_subscriber_name>')
-def add(new_subscriber_name):
+@app.route('/add/')
+def add():
     """
     get stats
     make a new yo
@@ -27,14 +27,16 @@ def add(new_subscriber_name):
         for the user as well
 
     """
+    new_subscriber_name = request.args.get('username')
     stats_object = models.Stats.query.first()
     subscriber = models.User.query.filter_by(yo_name=new_subscriber_name).first()
 
     if not subscriber:
-        subscriber = models.User(yo_name=new_subscriber_name, yo_count=0)
+        subscriber = models.User(yo_name=new_subscriber_name, 
+                timestamp=datetime.datetime.utcnow(), yo_count=0)
         stats_object.subscriber_count += 1
 
-    new_yo = models.Yo()
+    new_yo = models.Yo(timestamp=datetime.datetime.utcnow(), author=subscriber)
     subscriber.yo_count += 1
     stats_object.yo_count += 1
     db.session.add(new_yo)
@@ -48,4 +50,17 @@ def add(new_subscriber_name):
 
     return render_template("index.html", subscribers=total_subs, yos=total_yos)
 
+@app.route('/about')
+def about():
+    return render_template("about.html")
+
+@app.route('/subscriber_count')
+def subscriber_count():
+    stat = models.Stats.query.first()
+    return str(stat.subscriber_count)
+
+@app.route('/yo_count')
+def yo_count():
+    stat = models.Stats.query.first()
+    return str(stat.yo_count)
 
