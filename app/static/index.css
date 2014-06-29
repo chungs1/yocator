@@ -1,95 +1,45 @@
 body {
   background: url("http://www.paperpkads.com/news/wp-content/uploads/2013/04/IDC.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
-}
-.yotheworld {
-  font-size: 150px;
-  color: #A87DFF;
-  font-weight: bold;
   font-family: 'Lato', sans-serif;
-  margin-top: 12%;
-  margin-left: 40%;
-  -webkit-text-stroke: 2px white;
-   text-shadow:
-       3px 3px 0 #000,
-     -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000;
-}
-.therest {
-  font-size:75px;
-  color: #A87DFF;
-  font-weight: bold;
-  font-family: 'Lato', sans-serif;
-  margin-left: 35%;
-  -webkit-text-stroke: 2px white;
-   text-shadow:
-       3px 3px 0 #000,
-     -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000;
+  width: 100%;
 }
 
-.counter {
-  color: #8CBEFF;
-  font-weight: bold;
-  font-size: 40px;
-  font-family: 'Lato', sans-serif;
-      margin-left: 36%;
-      margin-top: 3%;
-
-      -webkit-text-stroke: 1px white;
-   text-shadow:
-       3px 3px 0 #000,
-     -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000;
-
-
+.subtitle {
+  font-size: 4em;
+  font-weight: 300;
 }
 
-.yos {
-  color: #8CBEFF;
+.title {
+  font-size: 6em;
   font-weight: bold;
-  font-size: 40px;
-    font-family: 'Lato', sans-serif;
-    margin-left: 43%;
-    -webkit-text-stroke: 1px white;
-   text-shadow:
-       3px 3px 0 #000,
-     -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000;
-         font-family: 'Lato', sans-serif;
+  color: white;
+  //-webkit-text-stroke: 1px #9B59B6;
+}
+
+.block {
+  background-color: #9B59B6;
+  background-size:cover;
+  color: #fff;
+  height: 550px;
 }
 
 a {
-  margin-top: 30px;
-    color: #0060B6;
-    text-decoration: none;
+  color: #00B7FF;
 }
 
-a:hover 
-{
-     color:#00A0C6; 
-     text-decoration:none; 
-     cursor:pointer;  
+.blurb {
+  font-weight: 300;
+  font-size: 1.5em;
 }
 
-.footer {
-  padding-top: 20px;
-  position:fixed;
-   left:0px;
-   bottom:0px;
-   height:30px;
-   width:100%;
-   background: black;
-   color: white;
+.yohandle {
+  color: red;
+}
+
+#second {
+  background-color: #639AFF;
+  color: #FFF;
+  font-weight: 300;
+
 }
