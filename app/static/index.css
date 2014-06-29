@@ -19,7 +19,11 @@ body {
   background-color: #639AFF;
   background-size:cover;
   color: #fff;
-  height: 550px;
+  height: 400px;
+  width: 1100px;
+  margin: auto;
+  margin-top: 20px;
+  border-radius:10px;
 }
 
 a {
@@ -35,10 +39,31 @@ a {
   color: red;
 }
 
+#first {
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+}
+
 #second {
   background-color: #ddd9fb;
   color: #000;
   font-weight: 300;
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
 }
 
 #help {
