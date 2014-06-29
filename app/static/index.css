@@ -18,7 +18,7 @@ body {
 }
 
 .block {
-  background-color: #9B59B6;
+  background-color: #639AFF;
   background-size:cover;
   color: #fff;
   height: 550px;
@@ -38,8 +38,16 @@ a {
 }
 
 #second {
-  background-color: #639AFF;
-  color: #FFF;
+  background-color: #ddd9fb;
+  color: #000;
   font-weight: 300;
+}
 
+#help {
+  font-size: 4em;
+}
+
+#content {
+  padding-top: 9%;
+  font-size: 1.2em;
 }
