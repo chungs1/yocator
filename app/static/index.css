@@ -1,0 +1,53 @@
+body {
+  background: url("http://www.paperpkads.com/news/wp-content/uploads/2013/04/IDC.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+}
+
+.subtitle {
+  font-size: 4em;
+  font-weight: 300;
+}
+
+.title {
+  font-size: 6em;
+  font-weight: bold;
+  color: white;
+  //-webkit-text-stroke: 1px #9B59B6;
+}
+
+.block {
+  background-color: #639AFF;
+  background-size:cover;
+  color: #fff;
+  height: 550px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.blurb {
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+.yohandle {
+  color: red;
+}
+
+#second {
+  background-color: #ddd9fb;
+  color: #000;
+  font-weight: 300;
+}
+
+#help {
+  font-size: 4em;
+}
+
+#content {
+  padding-top: 9%;
+  font-size: 1.2em;
+}

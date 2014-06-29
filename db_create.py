@@ -10,3 +10,8 @@ if not os.path.exists(SQLALCHEMY_MIGRATE_REPO):
     api.version_control(SQLALCHEMY_DATABASE_URI, SQLALCHEMY_MIGRATE_REPO)
 else:
     api.version_control(SQLALCHEMY_DATABASE_URI, SQLALCHEMY_MIGRATE_REPO, api.version(SQLALCHEMY_MIGRATE_REPO))
+
+from app import models
+stat = models.Stats()
+db.session.add(stat)
+db.session.commit()
