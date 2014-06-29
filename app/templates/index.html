@@ -97,7 +97,7 @@
   $(document).ready(function() {
     function get_yos() {
       $.ajax({
-        url: "http://www.yotheworld.org/yo_count",
+        url: "/yo_count",
         cache: false,
         success: function(html){
                 $("#yo_number").html(html);
