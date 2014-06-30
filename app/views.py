@@ -57,10 +57,10 @@ def about():
 @app.route('/subscriber_count')
 def subscriber_count():
     stat = models.Stats.query.first()
-    return str(stat.subscriber_count+532)
+    return str(stat.subscriber_count+500)
 
 @app.route('/yo_count')
 def yo_count():
     stat = models.Stats.query.first()
-    return str(stat.yo_count+1523)
+    return str(stat.yo_count+1500)
 
