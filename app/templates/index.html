@@ -1,6 +1,7 @@
 <!doctype HTML>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../static/index.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -9,6 +10,24 @@
 
   
   <body>
+    <div id="share-wrapper">
+      <ul class="share-inner-wrp">
+        <!-- Facebook -->
+        <li class="facebook button-wrap" style="background-color:#4c66a4;color:white;"><a style="color:white;" href="https://www.facebook.com/sharer/sharer.php?u=http://www.yotheworld.org">Facebook Share</a><span><img src="../static/icons/facebook/FB-f-Logo__blue_29.png"></img></span></li>
+        
+        <!-- Twitter -->
+        <li class="twitter button-wrap" style="background-color:#55acee;"><a href="https://twitter.com/home?status=http://www.yotheworld.org" style="color:white;">Tweet this</a><img  id="twit" src="http://www.datawatch.ze.com/img/twitter.png"></img></li>
+        
+         <!-- Digg -->
+        <li class="digg button-wrap" style="background-color:white"><a href="http://www.digg.com/submit?phase=2&amp;url=http://www.yotheworld.org" style="color:black">Digg it</a><img id="dig" src="http://www.ashaandryan.com/wp-content/themes/radial/images/diggIcon.png"></img></li>
+        
+        <!-- Stumbleupon -->
+        <li class="tumblr button-wrap" style="background-color:#2c4762;"><a style="color:white;" href="http://www.stumbleupon.com/submit?url=http://www.yotheworld.org">Tumblr Share</a><img id="tum" src="http://detroiturbex.com/img/social/tumblr_icon_small.jpg"></img></li>
+        
+        <!-- Google -->
+        <li class="google button-wrap" style="background-color:#DD4B39"><a style="color:white;" href="https://plus.google.com/share?url=http://www.yotheworld.org">Share Google+</a><img id='goog' src="http://upload.wikimedia.org/wikipedia/commons/b/ba/Google_plus_32.png"></img></li>
+      </ul>
+    </div>
     <div class="navv">
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -110,6 +129,17 @@
 
       </div>
     </div>
+      <div class="row" style="padding-bottom:1%;margin-top:0px;background-color:#2f3238">
+        <div class="col-md-4">
+          <a href="http://github.com/chungs1/yocator"><button class="" id="git"><h2>Github</h2></button></a>
+        </div>
+        <div class="col-md-4 quick">
+          <a href="http://facebook.com/YOTHEWORLDforcharity"><button class="" id="fb"><h2>Facebook</h2></button></a>
+        </div>
+        <div class="col-md-4 quick">
+          <a href="https://twitter.com/yotheworld"><button class="" id="twitter"><h2>Twitter</h2></button></a>
+        </div>
+      </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -127,6 +157,61 @@
       setTimeout(get_yos, 1000);
     }
     get_yos();
+
+    var pageTitle = document.title; //HTML page title
+    var pageUrl = location.href; //Location of the page
+
+    //user hovers on the share button   
+    $('#share-wrapper li').hover(function() {
+        var hoverEl = $(this); //get element
+        
+        //browsers with width > 699 get button slide effect
+        if($(window).width() > 699) { 
+            if (hoverEl.hasClass('visible')){
+                hoverEl.animate({"margin-left":"-117px"}, "fast").removeClass('visible');
+            } else {
+                hoverEl.animate({"margin-left":"0px"}, "fast").addClass('visible');
+            }
+        }
+    });
+        
+    //user clicks on a share button
+    $('.button-wrap').click(function(event) {
+            var shareName = $(this).attr('class').split(' ')[0]; //get the first class name of clicked element
+            
+            switch (shareName) //switch to different links based on different social name
+            {
+                case 'facebook':
+                    var openLink = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&amp;title=' + encodeURIComponent(pageTitle);
+                    break;
+                case 'twitter':
+                    var openLink = 'http://twitter.com/home?status=' + encodeURIComponent(pageTitle + ' ' + pageUrl);
+                    break;
+                case 'digg':
+                    var openLink = 'http://www.digg.com/submit?phase=2&amp;url=' + encodeURIComponent(pageUrl) + '&amp;title=' + encodeURIComponent(pageTitle);
+                    break;
+                case 'tumblr':
+                    var openLink = 'http://www.tumblr.com/share/link?url=' + encodeURIComponent(pageUrl) + '&name=' + encodeURIComponent(pageTitle) + '&description=' + "The Simplest Charity";
+                    break;
+                case 'google':
+                    var openLink = 'https://plus.google.com/share?url=' + encodeURIComponent(pageUrl) + '&amp;title=' + encodeURIComponent(pageTitle);
+                    break;
+                case 'email':
+                    var openLink = 'mailto:?subject=' + pageTitle + '&body=Found this useful link for you : ' + pageUrl;
+                    break;
+            }
+        
+        //Parameters for the Popup window
+        winWidth    = 650;  
+        winHeight   = 450;
+        winLeft     = ($(window).width()  - winWidth)  / 2,
+        winTop      = ($(window).height() - winHeight) / 2, 
+        winOptions   = 'width='  + winWidth  + ',height=' + winHeight + ',top='    + winTop    + ',left='   + winLeft;
+        
+        //open Popup window and redirect user to share website.
+        window.open(openLink,'Share This Link',winOptions);
+        return false;
+    });
   })
   </script>
   </body>
