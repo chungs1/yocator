@@ -17,6 +17,15 @@ def index():
 
     return render_template("index.html", subscribers=total_subs, yos=total_yos)
 
+@app.route('/subs')
+def subs():
+    stats = models.Stats.query.first()
+    total_subs = stats.subscriber_count
+    total_yos = stats.yo_count
+
+    return render_template("subs.html", subscribers=total_subs, yos=total_yos)
+
+
 @app.route('/add/')
 def add():
     """
